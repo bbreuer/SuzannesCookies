@@ -756,6 +756,14 @@ video {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -862,7 +870,33 @@ video {
   outline-offset: 2px;
 }
 
+@media not all and (min-width: 1280px) {
+  .max-xl\:hidden {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  .max-lg\:hidden {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .max-md\:block {
+    display: block;
+  }
+
+  .max-md\:hidden {
+    display: none;
+  }
+}
+
 @media not all and (min-width: 640px) {
+  .max-sm\:block {
+    display: block;
+  }
+
   .max-sm\:hidden {
     display: none;
   }
@@ -903,6 +937,10 @@ video {
     margin-top: 2rem;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -914,6 +952,34 @@ video {
   .sm\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  @media (min-width: 1024px) {
+    .max-lg\:lg\:hidden {
+      display: none;
+    }
   }
 }
 
