@@ -588,6 +588,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -622,6 +626,10 @@ video {
 
 .h-96 {
   height: 24rem;
+}
+
+.h-\[400px\] {
+  height: 400px;
 }
 
 .w-1\/2 {
@@ -857,6 +865,14 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
