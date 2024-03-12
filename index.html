@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body class="m-0 p-0 bg-white z-20">
-    <div class="bg-yellow-300 h-20 w-full shadow-xl">
+    <div  class="header-container bg-yellow-300 h-20 w-full shadow-xl">
         <nav class="flex items-center justify-end">
             <div class="absolute top-0 left-0 flex items-center mt-2 hover:cursor-pointer">
                 <img class="h-16" src="media/suzanne_cookie_logo_nostars.png">
@@ -22,9 +22,13 @@
                 <a href="#contact"><div class="hover:text-blue-400 hover:cursor-pointer">Contact</div></a>              
             </div>
             <div class="sm:hidden h-20 flex items-center mr-4 hover:cursor-pointer">
-                <img class="h-8" src="media/bars.svg">
+                <img class="h-8" onclick="toggleDrawer()" src="media/bars.svg">
             </div>
         </nav>
+    </div>
+    
+    <div class="h-20 w-full">
+
     </div>
 
     <div class="h-96 w-full mt-10">
@@ -36,7 +40,7 @@
         </div>
     </div>
 
-    <div id="about" class="h-60 max-sm:h-72 w-full mt-10">
+    <div id="about" class="h-60 max-sm:h-72 w-full mt-10" style="scroll-margin-top: 100px;">
         <div class="h-60 max-sm:h-72 w-full bg-yellow-300 rounded-3xl shadow-lg text-center flex items-center flex-col">
             <div class="font-cookies max-sm:text-2xl text-4xl p-4 sm:mt-8 mt-5">
                 About
@@ -47,7 +51,7 @@
         </div>
     </div>
     
-    <div id="nutrition" class="h-96 w-full mt-10 flex justify-center items-center gap-4">
+    <div id="nutrition" class="h-96 w-full mt-10 flex justify-center items-center gap-4" style="scroll-margin-top: 100px;">
         <div class="h-96 sm:w-1/2 w-full bg-yellow-300 rounded-3xl shadow-lg flex flex-col justify-center">
                 <div class="font-cookies text-center text-2xl mt-6">
                 <div>Nutrition<br>Facts</div>
@@ -63,7 +67,7 @@
 
 
 
-    <div class="h-[400px] w-full bg-yellow-300 shadow-lg mt-10 flex justify-center items-center flex-col gap-2">
+    <div id="wheretofindme" class="h-[400px] w-full bg-yellow-300 shadow-lg mt-10 flex justify-center items-center flex-col gap-2" style="scroll-margin-top: 100px;">
         <div class="font-cookies text-2xl">Where to find me?</div>
         <div class="font-cookies text-2xl">Every Sunday 9:00am - 2:00pm</div>
         <div class="hidden lg:block sm:hidden md:hidden">
@@ -78,9 +82,9 @@
     </div>
 
 
-    <div class="h-[500px] w-full bg-yellow-300 mt-10 font-cookies">
+    <div id="contact" class="h-[500px] w-full bg-yellow-300 mt-10 font-cookies" style="scroll-margin-top: 100px;">
         <div class="flex flex-col justify-center items-center h-full w-full">
-            <div class="text-2xl mb-10">Contact me</div>
+            <div class="text-2xl">Contact me</div>
             <form name="contact" class="flex flex-col gap-2 w-full p-4" method="POST" netlify>
                 <label>Name:</label>
                 <input name="name" type="text" placeholder="name" required class="border rounded focus:outline-none focus:border-blue-500 px-3 py-2">
@@ -97,12 +101,25 @@
 
     </div>
 
+    <div id="drawer_container">
+        <div id="drawer">
+            <div id="drawer_close_btn" class="bg-yellow-300 absolute top-0 left-0 mt-4 ml-4 py-0 px-2 border-black border-2 rounded-lg shadow-xl hover:cursor-pointer" onclick="toggleDrawer()">X</div>
+            <div id="drawer_content" class="font-cookies bg-yellow-300 flex flex-col justify-start items-center gap-10 border-l-2 border-b-2 border-black h-[500px]">
+                <div class="mt-10 underline underline-offset-4 rounded-lg px-4 py-2 text-2xl">Menu</div>
+                <a href="#about"><div onclick="toggleDrawer()" class="border-2 border-black rounded-lg px-4 py-2 shadow-xl hover:cursor-pointer hover:bg-yellow-600">About</div></a>
+                <a href="#nutrition"><div onclick="toggleDrawer()" class="border-2 border-black rounded-lg px-4 py-2 shadow-xl hover:cursor-pointer hover:bg-yellow-600">Nutrition</div></a>
+                <a href="#contact"><div onclick="toggleDrawer()" class="border-2 border-black rounded-lg px-4 py-2 shadow-xl hover:cursor-pointer hover:bg-yellow-600">Contact</div></a>
+                <a href="#wheretofindme"><div onclick="toggleDrawer()" class="border-2 border-black rounded-lg px-4 py-2 shadow-xl hover:cursor-pointer hover:bg-yellow-600 text-center">Where to <br>find me</div></a>
+            </div>
+        </div>
+    </div>
+
     <footer class="border-t-2 border-black fixed bottom-0 left-0 h-20 w-full bg-yellow-300 text-black flex justify-center items-center">
         <div class="font-cookies">
             Since 2024
         </div>
     </footer>
 
-
+<script src="drawer.js"></script>
 </body>
 </html>

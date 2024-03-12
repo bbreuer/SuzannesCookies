@@ -572,8 +572,8 @@ video {
   margin: 0px;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .mr-4 {
@@ -590,6 +590,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-5 {
@@ -656,6 +660,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -688,6 +696,10 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -704,12 +716,12 @@ video {
   border-width: 8px;
 }
 
-.border-t-8 {
-  border-top-width: 8px;
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
-.border-t-4 {
-  border-top-width: 4px;
+.border-l-2 {
+  border-left-width: 2px;
 }
 
 .border-t-2 {
@@ -766,9 +778,24 @@ video {
   padding-right: 2.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .py-2 {
@@ -821,6 +848,10 @@ video {
   text-decoration-line: underline;
 }
 
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
 .underline-offset-8 {
   text-underline-offset: 8px;
 }
@@ -843,6 +874,36 @@ video {
   font-style: normal;
 }
 
+#drawer_container {
+  position: relative;
+  height: 100%;
+}
+
+#drawer {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* Initially hidden */
+  width: 250px;
+  background-color: #f0f0f0;
+  transition: right 0.3s ease;
+  z-index: 999;
+  /* Ensure it's above other content */
+}
+
+#drawer.open {
+  right: 0;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  /* Ensures the header stays on top of other content */
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -850,6 +911,11 @@ video {
 .hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-yellow-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-400:hover {
@@ -946,4 +1012,3 @@ video {
   }
 }
 
-  
