@@ -51,7 +51,7 @@
         </div>
     </div>
     
-    <div id="nutrition" class="h-96 w-full mt-10 flex justify-center items-center gap-4" style="scroll-margin-top: 100px;">
+    <div id="nutrition" class="h-96 w-full mt-10 flex justify-between items-center gap-28" style="scroll-margin-top: 100px;">
         <div class="h-96 sm:w-1/2 w-full bg-yellow-300 rounded-3xl shadow-lg flex flex-col justify-center">
                 <div class="font-cookies text-center text-2xl mt-6">
                 <div>Nutrition<br>Facts</div>
@@ -63,6 +63,10 @@
         <div class="max-sm:hidden w-full">
             <video class="object-cover shadow-xl h-96 rounded-3xl border-8 border-yellow-300" src="media/cookie_video1.mp4" autoplay muted playsinline loop></video>
         </div>
+    </div>
+
+    <div class=" w-full sm:hidden">
+        <video class="object-cover shadow-xl h-96 rounded-3xl border-8 border-yellow-300" src="media/cookie_video1.mp4" autoplay muted playsinline loop></video>
     </div>
 
 
@@ -86,13 +90,13 @@
         <div class="flex flex-col justify-center items-center h-full w-full">
             <div class="text-2xl">Contact me</div>
             <form name="contact" action="sucessPage.html" class="flex flex-col gap-2 w-full p-4" method="POST" netlify>
-                <label>Name:</label>
-                <input name="name" type="text" placeholder="name" required class="border rounded focus:outline-none focus:border-blue-500 px-3 py-2">
-                <label>Email:</label>
-                <input name="email" type="email" placeholder="email" required class="border rounded focus:outline-none focus:border-blue-500 px-3 py-2">
-                <label>Message:</label>
-                <textarea name="message" rows="5" class="border rounded focus:outline-none focus:border-blue-500 px-3 py-2" placeholder="message"></textarea>
-                <button type="submit" id="submit" class="shadow-xl border-2  border-black rounded-xl mt-2 hover:bg-yellow-500">Send Message</button>
+                <label class="sm:mx-40 mx-0">Name:</label>
+                <input name="name" type="text" placeholder="name" required class="sm:mx-40 mx-0 border rounded focus:outline-none focus:border-blue-500 px-3 py-2">
+                <label class="sm:mx-40 mx-0">Email:</label>
+                <input name="email" type="email" placeholder="email" required class="sm:mx-40 mx-0 border rounded focus:outline-none focus:border-blue-500 px-3 py-2">
+                <label class="sm:mx-40 mx-0">Message:</label>
+                <textarea name="message" rows="5" class=" sm:mx-40 mx-0 border rounded focus:outline-none focus:border-blue-500 px-3 py-2" placeholder="message"></textarea>
+                <button type="submit" id="submit" class="sm:mx-40 mx-0 shadow-xl border-2  border-black rounded-xl mt-2 hover:bg-yellow-500">Send Message</button>
             </form>
         </div>
     </div>
